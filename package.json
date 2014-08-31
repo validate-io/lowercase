@@ -1,6 +1,6 @@
 {
   "name": "validate.io-lowercase",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Validates if a value is a lowercase string.",
   "author": {
     "name": "Athan Reines",
