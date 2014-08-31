@@ -5,7 +5,7 @@ var // Expectation library:
 	chai = require( 'chai' ),
 
 	// Module to be tested:
-	lib = require( './../lib' );
+	isLowercase = require( './../lib' );
 
 
 // VARIABLES //
@@ -20,9 +20,29 @@ describe( 'validate.io-lowercase', function tests() {
 	'use strict';
 
 	it( 'should export a function', function test() {
-		expect( lib ).to.be.a( 'function' );
+		expect( isLowercase ).to.be.a( 'function' );
 	});
 
-	it( 'should do something' );
+	it( 'should positively validate', function test() {
+		assert.ok( isLowercase( 'hello' ) );
+	});
+
+	it( 'should negatively validate', function test() {
+		var values = [
+				5,
+				[],
+				true,
+				function(){},
+				null,
+				{},
+				NaN,
+				'Hello',
+				undefined
+			];
+
+		for ( var i = 0; i < values.length; i++ ) {
+			assert.ok( !isLowercase( values[i] ) );
+		}
+	});
 
 });

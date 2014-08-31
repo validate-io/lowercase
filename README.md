@@ -19,15 +19,17 @@ For use in the browser, use [browserify](https://github.com/substack/node-browse
 To use the module,
 
 ``` javascript
-var lib = require( 'validate.io-lowercase' );
+var isLowercase = require( 'validate.io-lowercase' );
+
+console.log( isLowercase( 'hello' ) );
+// Returns true
+
+console.log( isLowercase( 'Hello' ) );
+// Returns false
 ```
 
 
 ## Examples
-
-``` javascript
-var lib = require( 'validate.io-lowercase' );
-```
 
 To run the example code from the top-level application directory,
 
