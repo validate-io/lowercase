@@ -28,6 +28,8 @@ console.log( isLowercase( 'Hello' ) );
 // Returns false
 ```
 
+Note: this method validates that a `value` is a `string`.
+
 
 ## Examples
 
