@@ -31,7 +31,7 @@ var bool = isLowercase( value );
 // returns true
 ```
 
-__Note__: this method validates that a `value` is a `string`. For all other types, the method returns `false`.
+__Note__: this method first validates that a `value` is a `string`. For all other types, the method returns `false`.
 
 
 
