@@ -29,7 +29,11 @@
     "validator",
     "valid",
     "string",
-    "lowercase"
+    "lowercase",
+    "is",
+    "type",
+    "check",
+    "islowercase"
   ],
   "bugs": {
     "url": "https://github.com/validate-io/lowercase/issues"
