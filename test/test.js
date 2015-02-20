@@ -1,3 +1,5 @@
+/* global require, describe, it */
+'use strict';
 
 // MODULES //
 
@@ -17,7 +19,6 @@ var expect = chai.expect,
 // TESTS //
 
 describe( 'validate.io-lowercase', function tests() {
-	'use strict';
 
 	it( 'should export a function', function test() {
 		expect( isLowercase ).to.be.a( 'function' );
@@ -25,20 +26,21 @@ describe( 'validate.io-lowercase', function tests() {
 
 	it( 'should positively validate', function test() {
 		assert.ok( isLowercase( 'hello' ) );
+		assert.ok( isLowercase( new String( 'hello' ) ) );
 	});
 
 	it( 'should negatively validate', function test() {
 		var values = [
-				5,
-				[],
-				true,
-				function(){},
-				null,
-				{},
-				NaN,
-				'Hello',
-				undefined
-			];
+			5,
+			[],
+			true,
+			function(){},
+			null,
+			{},
+			NaN,
+			'Hello',
+			undefined
+		];
 
 		for ( var i = 0; i < values.length; i++ ) {
 			assert.ok( !isLowercase( values[i] ) );

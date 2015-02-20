@@ -16,22 +16,34 @@ For use in the browser, use [browserify](https://github.com/substack/node-browse
 
 ## Usage
 
-To use the module,
-
 ``` javascript
 var isLowercase = require( 'validate.io-lowercase' );
-
-console.log( isLowercase( 'hello' ) );
-// Returns true
-
-console.log( isLowercase( 'Hello' ) );
-// Returns false
 ```
 
-Note: this method validates that a `value` is a `string`.
+#### isLowercase( value )
+
+Validates if a `value` is a lowercase `string`.
+
+``` javascript
+var value = 'beep';
+
+var bool = isLowercase( value );
+// returns true
+```
+
+__Note__: this method validates that a `value` is a `string`. For all other types, the method returns `false`.
+
 
 
 ## Examples
+
+``` javascript
+console.log( isLowercase( 'hello' ) );
+// returns true
+
+console.log( isLowercase( 'Hello' ) );
+// returns false
+```
 
 To run the example code from the top-level application directory,
 
@@ -44,7 +56,7 @@ $ node ./examples/index.js
 
 ### Unit
 
-Unit tests use the [Mocha](http://visionmedia.github.io/mocha) test framework with [Chai](http://chaijs.com) assertions. To run the tests, execute the following command in the top-level application directory:
+Unit tests use the [Mocha](http://mochajs.org) test framework with [Chai](http://chaijs.com) assertions. To run the tests, execute the following command in the top-level application directory:
 
 ``` bash
 $ make test
@@ -64,16 +76,16 @@ $ make test-cov
 Istanbul creates a `./reports/coverage` directory. To access an HTML version of the report,
 
 ``` bash
-$ open reports/coverage/lcov-report/index.html
+$ make view-cov
 ```
 
 
+---
 ## License
 
 [MIT license](http://opensource.org/licenses/MIT). 
 
 
----
 ## Copyright
 
 Copyright &copy; 2014. Athan Reines.

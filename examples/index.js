@@ -1,7 +1,9 @@
+'use strict';
+
 var isLowercase = require( './../lib' );
 
 console.log( isLowercase( 'hello' ) );
-// Returns true
+// returns true
 
 console.log( isLowercase( 'Hello' ) );
-// Returns false
+// returns false
